@@ -45,7 +45,8 @@ async def soldier(ctx, *, soldier: SoldierConverter):
         index = jdata["Soldier"].index(soldier)
         soldierPic = jdata["pic_soldier"][index]
         pic = discord.File(soldierPic)
-        await ctx.send(file=pic)
+        message="本圖由驅邪提供"
+        await ctx.send(content=message,file=pic)
 
 # 註冊一個別名為兵種名稱的指令，方便直接使用 !0.0兵種名稱
 for soldier_name in jdata.get("Soldier", []):
