@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 from core.classes import Cog_Extension
 
-with open("D:\\Discord機器人\\discord-bot\\setting.json","r",encoding="utf8")as jfile:
+with open("setting.json","r",encoding="utf8")as jfile:
     jdata = json.load(jfile)
 
 class SoldierConverter(commands.Converter):
